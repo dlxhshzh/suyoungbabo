@@ -28,9 +28,9 @@ def hello_world():
   response.raise_for_status()
 
   analysis = response.json()
-  image_caption = analysis["description"]["captions"][0]["text"].capitalize()
+  image_cAption = analysis["description"]["captions"][0]["text"].capitalize()
 
-  return render_template('index.html', image_caption=image_caption)
+  return render_template('index.html', image_caption=image_cAption)
     
 if __name__ == '__main__':
   app.run()
