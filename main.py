@@ -16,7 +16,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route('/')
 def hello_world():
   vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/"
-  vision_analyze_url = vision_base_url + "analyze"
+  vision_analyze_url = vision_base_url + "analyze/"
 
   image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/" + \
     "Broadway_and_Times_Square_by_night.jpg/450px-Broadway_and_Times_Square_by_night.jpg"
