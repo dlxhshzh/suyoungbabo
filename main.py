@@ -18,7 +18,7 @@ def hello_world():
   vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/"
   vision_analyze_url = vision_base_url + "analyze"
 
-  image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/" + \
+  image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/" + "\"
     "Broadway_and_Times_Square_by_night.jpg/450px-Broadway_and_Times_Square_by_night.jpg"
 
   headers = {'Ocp-Apim-Subscription-Key': subscription_key }
@@ -28,9 +28,9 @@ def hello_world():
   response.raise_for_status()
 
   analysis = response.json()
-  image_cAption = analysis["description"]["captions"][0]["text"].capitalize()
+  image_caption = analysis["description"]["captions"][0]["text"].capitalize()
 
-  return render_template('index.html', image_caption=image_cAption)
+  return render_template('index.html', image_caption=image_caption)
     
 if __name__ == '__main__':
   app.run()
